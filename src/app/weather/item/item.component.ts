@@ -25,7 +25,9 @@ export class ItemComponent implements OnInit {
 
   getTime() {
     const now = new Date();
-    return `${now.getHours()}:${now.getMinutes()}`;
+    return `${this.formatDate(now.getHours())}:${this.formatDate(
+      now.getMinutes()
+    )}`;
   }
 
   getTemperature() {
@@ -35,5 +37,9 @@ export class ItemComponent implements OnInit {
 
   onClose() {
     this.weatherItem.close();
+  }
+
+  private formatDate(value: number) {
+    return value < 10 ? `0${value}` : value;
   }
 }
