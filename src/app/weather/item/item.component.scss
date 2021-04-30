@@ -1,0 +1,39 @@
+@import "~@angular/material/theming";
+
+:host {
+  display: block;
+  position: relative;
+
+  > .city {
+    cursor: default;
+  }
+
+  > .weather {
+    padding: 16px;
+    position: absolute;
+    z-index: 100;
+    background: white;
+
+    left: 100%;
+    bottom: 100%;
+
+    margin-left: -8px;
+
+    @include mat-elevation(3);
+  }
+
+  > .weather > .top {
+    margin-bottom: 8px;
+    display: flex;
+  }
+
+  > .weather > .top > .time {
+    margin-right: 16px;
+  }
+
+  > .weather > .top > .actions {
+    text-align: right;
+    margin-top: -16px;
+    margin-right: -16px;
+  }
+}

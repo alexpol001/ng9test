@@ -1,5 +1,26 @@
 <ng-container *ngIf="item">
-  <div class="city">
+  <div class="city" [weatherItem]="weather">
     {{ item.city }}
   </div>
+
+  <ng-template #weather>
+    <div class="weather">
+      <div class="top">
+        <div class="time">
+          {{ getTime() }}
+        </div>
+        <div class="actions">
+          <button mat-icon-button (click)="onClose()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="temperature">
+        {{ getTemperature() }}
+      </div>
+      <div class="sky">
+        {{ item.sky }}
+      </div>
+    </div>
+  </ng-template>
 </ng-container>
