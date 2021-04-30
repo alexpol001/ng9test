@@ -1,0 +1,9 @@
+<ng-container *ngIf="list?.length">
+  <mat-list role="list">
+    <ng-container *ngFor="let item of list">
+      <mat-list-item role="listitem">
+        <app-item [item]="item"></app-item>
+      </mat-list-item>
+    </ng-container>
+  </mat-list>
+</ng-container>

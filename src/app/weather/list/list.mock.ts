@@ -1,6 +1,6 @@
-import { Weather, WeatherSky } from './weather.model';
+import { WeatherItem, WeatherSky } from '../weather.models';
 
-export const WEAHTER: Weather[] = [
+export const WEAHTER_LIST: WeatherItem[] = [
   {
     city: 'Санкт-Петербург',
     temperature: 20,

@@ -1,4 +1,4 @@
-export interface Weather {
+export interface WeatherItem {
   city: string;
   temperature: number;
   sky: WeatherSky;
